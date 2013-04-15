@@ -1,7 +1,5 @@
 package bessant.chris.test.app;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Random;
 
 /**
