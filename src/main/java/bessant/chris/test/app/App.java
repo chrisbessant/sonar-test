@@ -17,11 +17,11 @@ public class App
     public static void main( String[] args )
     {
         App a = new App();
-        Integer q = selectQuote();
+        int q = selectQuote();
         System.out.println(a.getQuote(q));
     }
     
-    public static Integer selectQuote() {
+    public static int selectQuote() {
     	Random randomGenerator = new Random();
     	return randomGenerator.nextInt(5); 
     }
