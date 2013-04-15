@@ -40,7 +40,7 @@ public class AppTest
     public void testQuotSelector() {
     	boolean valid;
     	App a = new App();
-        Integer q = App.selectQuote();
+        int q = App.selectQuote();
         
         if (q < 5 && q > -1) {
         	valid = true;
