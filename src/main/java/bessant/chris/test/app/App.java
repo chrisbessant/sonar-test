@@ -26,7 +26,7 @@ public class App
     	return randomGenerator.nextInt(5); 
     }
     
-    public String getQuote(Integer q) {	
+    public String getQuote(int q) {	
     	
     	quote[0] = "In the beginning there was nothing, which exploded - Terry Pratchet";
     	quote[1] = "Nothing happens until something moves - Albert Einstein";
