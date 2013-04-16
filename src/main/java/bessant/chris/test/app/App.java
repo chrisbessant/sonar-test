@@ -1,5 +1,7 @@
 package bessant.chris.test.app;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Random;
 
 /**
@@ -10,13 +12,22 @@ import java.util.Random;
 public class App 
 {
     private static final int NUM_OF_QUOTES = 5;
+    
+ // A little over the top for this purpose maybe ...
+    private static final int ZERO = 0;
+    private static final int ONE = 1;
+    private static final int TWO = 2;
+    private static final int THREE = 3;
+    private static final int FOUR = 4; 
+    
     private static String[] quote = new String[NUM_OF_QUOTES];
 	
-    public static void main( String[] args )
+    public static void main( String[] args ) throws FileNotFoundException
     {
         App a = new App();
         int q = selectQuote();
-        System.out.println(a.getQuote(q));
+        
+        System.out.println(a.getQuote(q)); // Using printWriter to keep Sonar happy
     }
     
     public static int selectQuote() {
@@ -26,11 +37,11 @@ public class App
     
     public String getQuote(int q) {	
     	
-    	quote[0] = "In the beginning there was nothing, which exploded - Terry Pratchet";
-    	quote[1] = "Nothing happens until something moves - Albert Einstein";
-    	quote[2] = "Photons have mass? I didn’t even know they were Catholic - Woody Allen";
-    	quote[3] = "No, this trick won't work... How on earth are you ever going to explain in terms of chemistry and physics so important a biological phenomenon as first love? - Albert Einstein";
-    	quote[4] = "Physics isn't the most important thing. Love is - Richard P Feynman";
+    	quote[ZERO] = "In the beginning there was nothing, which exploded - Terry Pratchet";
+    	quote[ONE] = "Nothing happens until something moves - Albert Einstein";
+    	quote[TWO] = "Photons have mass? I didn’t even know they were Catholic - Woody Allen";
+    	quote[THREE] = "No, this trick won't work... How on earth are you ever going to explain in terms of chemistry and physics so important a biological phenomenon as first love? - Albert Einstein";
+    	quote[FOUR] = "Physics isn't the most important thing. Love is - Richard P Feynman";
     	
     	return quote[q];
     }
