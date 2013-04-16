@@ -7,12 +7,11 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-
-    private static final int TEST_QUOTE_NUM = 0;
-
-    extends TestCase
-{
+public class AppTest extends TestCase {
+	
+	private static final int TEST_QUOTE_NUM = 0;
+	
+	
     /**
      * Create the test case
      *
