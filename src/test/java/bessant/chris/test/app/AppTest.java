@@ -8,6 +8,9 @@ import junit.framework.TestSuite;
  * Unit test for simple App.
  */
 public class AppTest 
+
+    private static final int TEST_QUOTE_NUM = 0;
+
     extends TestCase
 {
     /**
@@ -54,7 +57,7 @@ public class AppTest
     
     public void testQuote() {
     	App a = new App();
-    	String quote = a.getQuote(0);
+    	String quote = a.getQuote(TEST_QUOTE_NUM);
     	assertEquals("In the beginning there was nothing, which exploded - Terry Pratchet", quote);
     }
     
