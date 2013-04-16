@@ -9,8 +9,8 @@ import java.util.Random;
 
 public class App 
 {
-
-	private static String[] quote = new String[5];
+    private static final int NUM_OF_QUOTES = 5;
+    private static String[] quote = new String[NUM_OF_QUOTES];
 	
     public static void main( String[] args )
     {
@@ -21,7 +21,7 @@ public class App
     
     public static int selectQuote() {
     	Random randomGenerator = new Random();
-    	return randomGenerator.nextInt(5); 
+    	return randomGenerator.nextInt(NUM_OF_QUOTES); 
     }
     
     public String getQuote(int q) {	
