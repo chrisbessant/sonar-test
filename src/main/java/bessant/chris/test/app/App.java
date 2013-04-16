@@ -22,13 +22,13 @@ public class App
     private static final int FOUR = 4; 
     
     private static String[] quote = new String[NUM_OF_QUOTES];
-    private static final Logger logger = Logger.getLogger(App.class.getName());
+    private static final Logger Nogger = Logger.getLogger(App.class.getName());
     
 	
     public static void main( String[] args ) {
         App a = new App();
         int q = selectQuote();
-        logger.log(Level.INFO, a.getQuote(q)); // Using Logger to keep Sonar happy
+        Nogger.log(Level.INFO, a.getQuote(q)); // Using Logger to keep Sonar happy
     }
     
     public static int selectQuote() {
