@@ -1,8 +1,10 @@
 package bessant.chris.test.app;
 
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  * This is purely a simple test class. It's purpose is only to create a Maven project which
@@ -21,13 +23,16 @@ public class App
     private static final int FOUR = 4; 
     
     private static String[] quote = new String[NUM_OF_QUOTES];
+    private static final Logger logger = Logger.getLogger(App.class.getName());
+    
 	
     public static void main( String[] args ) throws FileNotFoundException
     {
         App a = new App();
         int q = selectQuote();
-        
-        System.out.println(a.getQuote(q)); // Using printWriter to keep Sonar happy
+
+        logger.log(Level.INFO, a.getQuote(q)); // Using Logger to keep Sonar happy
+        // System.out.println(a.getQuote(q)); // Using printWriter to keep Sonar happy
     }
     
     public static int selectQuote() {
